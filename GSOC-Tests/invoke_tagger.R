@@ -10,6 +10,6 @@ invoke_tagger = function(text){
   tokenizers <- annotate(text, list(sentence_tokenizer, word_tokenizer))
   pos_tags_with_prob = annotate(text, pos_tag_tokenizer, tokenizers)
   
-  print(pos_tags_with_prob)
-  
+  #print(pos_tags_with_prob)
+  return(pos_tags_with_prob)
 }
