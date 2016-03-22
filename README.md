@@ -50,8 +50,5 @@ $ cd TextMining/GSOC-Tests/
   
  # Topic Modelling
  
- -The LDAvis package is used for visualization purposes.
- -After running topic_model script, open "127.0.0.1:4321" to view the model.
-  
-  
-  
+ - The LDAvis package is used for visualization purposes.
+ - After running topic_model script, open "127.0.0.1:4321" on your browser to view the model!
