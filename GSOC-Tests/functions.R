@@ -1,8 +1,9 @@
-library(openNLP)
-library(NLP)
-library(tm)
-library(lda)
-library(LDAvis)
+if(!require('openNLP')){install.packages('openNLP')}
+if(!require('NLP')){install.packages('NLP')}
+if(!require('tm')){install.packages('tm')}
+if(!require('lda')){install.packages('lda')}
+if(!require('LDAvis')){install.packages('LDAvis')}
+requireNamespace('servr')
 
 get_text = function(file_name, url){
   
