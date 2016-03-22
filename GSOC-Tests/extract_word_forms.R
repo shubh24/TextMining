@@ -1,17 +1,12 @@
-source('./invoke_tagger.R')
+source('./functions.R')
 
-get_part_of_speech = function(text, part_of_speech){
-  
-  pos_tags_with_prob = invoke_tagger(text)
-  words = subset(pos_tags_with_prob, type == "word")  
-  pos_to_check = substring(part_of_speech,1,1)
-  
-  for (i in 1:length(words)){
-    if (substring(words$features[i][[1]][1],1,1) == pos_to_check){
-      print(substring(text,words$start[i],words$end[i]))
-    }
-  }
+args = commandArgs(trailingOnly=TRUE)
+
+if (length(args) != 2) {
+  stop("Give appropriate arguments.")
+} else if (length(args) == 2){
+  text = args[1]
+  part_of_speech = args[2]
 }
 
-#get_part_of_speech("I am a boy.", "VERB")
-
+get_part_of_speech(text, part_of_speech = part_of_speech)
